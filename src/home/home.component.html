@@ -1,0 +1,33 @@
+<div *ngFor="let item of data">
+  <div class="background-image">
+    <img [src]="item.resim" width="300px" height="200px" alt="background resmi" />
+  </div>
+  
+  
+  <div class="content">
+    <div class="info-row">
+      <p class="description">{{ item.aciklama }}</p>
+      <p>{{ item.gonderi_tarih }}</p>
+      <p>Beğeni: {{ item.begeni }}</p>
+    </div>
+    
+    <div class="separator"></div> 
+    
+    <div class="comments">
+      <div *ngFor="let yorum of item.yorumlar" class="comment">
+        <div class="comment-header">
+          <img [src]="yorum.ppfoto" width="50px" height="50px" alt="profil fotoğrafı" class="profile-photo" />
+          <div class="comment-text">
+            <strong>{{ yorum.kisi }}</strong>
+            <div class="separator"></div> 
+            <p> ({{ yorum.yorum_tarih }}): &nbsp;{{ yorum.yorum }}</p>
+           
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-btn class="logout_btn" (click)="onLogout()" label="Logout"></app-btn>
