@@ -58,14 +58,14 @@ app-input input {
   box-sizing: border-box;
 }
 
-/* Buton */
-app-btn {
+/* Giriş Butonu */
+.login_btn {
   grid-column: 1 / span 2;
   display: flex;
   justify-content: center;
 }
 
-app-btn button {
+.login_btn button {
   width: 100%;
   padding: 12px;
   background-color: #3498DB;
@@ -77,28 +77,57 @@ app-btn button {
   transition: all 0.3s ease;
 }
 
-app-btn button:hover {
+.login_btn button:hover {
   background-color: #2980B9;
   transform: scale(1.05);
 }
 
-app-btn button:focus {
+.login_btn button:focus {
+  outline: none;
+}
+
+/* Kayıt Butonu */
+.register_btn {
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.register_btn button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2ECC71;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.register_btn button:hover {
+  background-color: #27AE60;
+  transform: scale(1.05);
+}
+
+.register_btn button:focus {
   outline: none;
 }
 
 /* Kayıt Bağlantısı */
-.login-link {
+.forgot-password-link {
   margin-top: 20px;
   font-size: 14px;
   color: #333;
   text-align: center;
 }
 
-.login-link a {
+.forgot-password-link a {
   color: #3498DB;
   text-decoration: none;
 }
 
-.login-link a:hover {
+.forgot-password-link a:hover {
   text-decoration: underline;
 }

@@ -1,71 +1,152 @@
+/* Genel Arka Plan */
+.post-container {
+  margin-bottom: 20px; /* Gönderiler arasındaki boşluk */
+  max-width: 600px; /* Maksimum genişlik */
+  margin: 0 auto; /* Ortaya hizalama */
+  border: 1px solid #ddd; /* Gönderi çerçevesi */
+  border-radius: 8px; /* Köşe yuvarlama */
+  background-color: #fff; /* Arka plan rengi */
+  padding: 15px; /* İçerik alanı */
+}
+
+/* Arka Plan Resmi */
 .background-image {
-  width: 500px; 
-  height: 200px; 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 8px;
-  margin: 0 auto 10px auto; 
-  border: 2px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  max-width: 100%; /* Arka plan resmi genişliği */
+}
+
+/* Profil Fotoğrafı */
+.profile-photo {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* Açıklama */
+.description {
+  margin-top: 60px; /* Profil fotoğrafının altında açıklama */
   text-align: center;
-  gap: 15px;
+  font-weight: bold; /* Vurgulama */
+  font-size: 16px; /* Yazı boyutu */
 }
 
+/* İçerik */
 .content {
-  width: 500px;
-  margin: 0 auto; 
-  padding: 10px;
-  border: 1px solid #ddd; 
-  border-radius: 8px; 
-  background-color: #f9f9f9;
-  position: relative; 
-
-  padding-bottom: 20px;
+  margin-top: 20px;
 }
 
+/* Bilgi Satırı */
 .info-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 10px;
+  font-size: 14px; /* Yazı boyutu */
+  color: #555; /* Yazı rengi */
 }
 
-.description {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  flex: 1;
-}
-
-.info-row p {
-  margin: 0;
-  padding: 0 10px;
-}
-
+/* Ayrıcı */
 .separator {
-  border-top: 1px solid #000000;
+  border-top: 1px solid #ddd;
   margin: 10px 0;
 }
 
-.comment-header {
+/* Yorumlar */
+.comments {
+  margin-top: 10px;
+  padding: 10px; /* İçerik alanı */
+  border-top: 1px solid #ddd; /* Yorumlar ile gönderi arasındaki sınır */
+}
+
+/* Tekil Yorum */
+.comment {
+  margin-bottom: 10px;
   display: flex;
   align-items: flex-start;
 }
 
-.profile-photo {
-  border-radius: 50%;
-  margin-right: 10px;
+/* Yorum Başlığı */
+.comment-header {
+  display: flex;
+  align-items: center;
 }
 
+/* Yorum Metni */
 .comment-text {
-  max-width: calc(100% - 60px);
+  margin-left: 10px;
+  flex: 1;
+  font-size: 14px; /* Yazı boyutu */
+  color: #333; /* Yazı rengi */
 }
 
+/* Yorum Boşluğu */
+.yorumlar_bosluk {
+  margin-top: 5px;
+}
+
+/* Yorum Ekleme Alanı */
+.add-comment {
+  display: flex;
+  align-items: center; /* Yorum ekleme alanını hizalar */
+  margin-top: 10px;
+}
+
+.add-comment input {
+  flex: 1; /* Input alanının genişliği */
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px; /* Buton ile input arasındaki boşluk */
+  font-size: 14px; /* Yazı boyutu */
+  color: #333; /* Yazı rengi */
+}
+
+/* Yorum Gönder Butonu */
+.yorum_buton {
+  padding: 8px 12px;
+  background-color: #ffffff;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px; /* Yazı boyutu */
+}
+
+.yorum_buton:hover {
+  background-color: #2980B9;
+}
+
+/* Beğen Butonu */
+.like-button {
+  margin-top: 10px;
+  text-align: center; /* Butonları ortalar */
+}
+
+.like-button app-btn {
+  width: 100%;
+  max-width: 100px; /* Maksimum genişlik */
+}
+
+/* Logout Butonu */
 .logout_btn {
-  position: absolute;
-  top: 10px; 
-  left: 10px; 
-  padding: 5px 10px;
-  font-size: 14px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: #ffffff; /* Logout butonu rengi */
+  color: #FFFFFF; /* Yazı rengi */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px; /* Yazı boyutu */
 }
 
+.logout_btn:hover {
+  background-color: #000000; 
+  /* Hover rengi */
+}
